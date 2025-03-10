@@ -38,10 +38,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.meizu.mzhotfix.ResTestActivity" />
-        <activity android:name="com.meizu.mzhotfix.AboutActivity"
-                  android:label="关于我们"/>
-        <activity android:name="com.meizu.mzhotfix.HelperActivity"
-                  android:label="帮助中心"/>
     </application>
 
 </manifest>

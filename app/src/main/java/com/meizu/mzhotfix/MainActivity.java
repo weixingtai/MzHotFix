@@ -17,6 +17,10 @@ import androidx.core.content.ContextCompat;
 import com.taobao.sophix.SophixManager;
 
 public class MainActivity extends AppCompatActivity {
+
+    private final static String TAG = "MzHotFix";
+    private final static String SUB_TAG = "MainActivity-> ";
+
     private static final int REQUEST_EXTERNAL_STORAGE_PERMISSION = 0;
 
     private TextView mStatusTv;
@@ -26,23 +30,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mStatusTv = (TextView) findViewById(R.id.tv_status);
+        mStatusTv = findViewById(R.id.tv_status);
         updateConsole(SophixStubApplication.cacheMsg.toString());
 
         if (Build.VERSION.SDK_INT >= 23) {
             requestExternalStoragePermission();
         }
-        SophixStubApplication.msgDisplayListener = new SophixStubApplication.MsgDisplayListener() {
-            @Override
-            public void handle(final String msg) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        updateConsole(msg);
-                    }
-                });
-            }
-        };
+        SophixStubApplication.msgDisplayListener = msg -> runOnUiThread(() -> updateConsole(msg));
     }
 
     /**
@@ -116,24 +110,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_about_us:
-                AboutActivity.actionStart(this.getApplicationContext());
-                return true;
-            case R.id.action_helper:
-                HelperActivity.actionStart(this.getApplicationContext());
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 }

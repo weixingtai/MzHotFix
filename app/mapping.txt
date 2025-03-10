@@ -3,8 +3,8 @@
 # min_api: 18
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.0"}
-# pg_map_id: 54530b7
-# pg_map_hash: SHA-256 54530b79ffa2358c9e50201fb79a7e261d2ae0647ce8146ec060d936fc20b742
+# pg_map_id: 8caf6b3
+# pg_map_hash: SHA-256 8caf6b3e9a56c700392daf6a1502d16fe798b57023e251101300eaa5e4c5eaf0
 android.animation.Animator$AnimatorPauseListener -> android.animation.Animator$AnimatorPauseListener:
 # {"id":"com.android.tools.r8.synthesized"}
     void <clinit>() -> <clinit>
@@ -4002,7 +4002,7 @@ androidx.core.app.ActivityCompat -> k.b:
 androidx.core.app.ActivityCompat$$ExternalSyntheticApiModelOutline0 -> k.a:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    void androidx.core.app.ActivityCompat$$InternalSyntheticApiModelOutline$1$bb031996eabc66edd73b70d777c82a78f2217e0f26c52ec463cfd2c2e32c2fa4$0.m(android.app.Activity,java.lang.String[],int) -> a
+    void androidx.core.app.ActivityCompat$$InternalSyntheticApiModelOutline$2$bb031996eabc66edd73b70d777c82a78f2217e0f26c52ec463cfd2c2e32c2fa4$0.m(android.app.Activity,java.lang.String[],int) -> a
       # {"id":"com.android.tools.r8.synthesized"}
 androidx.core.app.ActivityCompat$1 -> k.b$a:
     java.lang.String[] val$permissions -> a
@@ -6505,45 +6505,62 @@ androidx.versionedparcelable.VersionedParcelParcel -> androidx.versionedparcelab
 androidx.versionedparcelable.VersionedParcelable -> a0.a:
 com.meizu.mzhotfix.A -> com.meizu.mzhotfix.a:
     void a_t2() -> a
-com.meizu.mzhotfix.AboutActivity -> com.meizu.mzhotfix.AboutActivity:
-    void actionStart(android.content.Context) -> B
 com.meizu.mzhotfix.DexFixDemo -> com.meizu.mzhotfix.b:
     int temp -> a
     void test_addField() -> a
     void test_addMethod() -> b
     void test_annotation() -> c
     void test_normal(android.content.Context) -> d
-com.meizu.mzhotfix.HelperActivity -> com.meizu.mzhotfix.HelperActivity:
-    void actionStart(android.content.Context) -> B
 com.meizu.mzhotfix.MainActivity -> com.meizu.mzhotfix.MainActivity:
     android.widget.TextView mStatusTv -> r
     java.lang.String mStatusStr -> s
-    void access$000(com.meizu.mzhotfix.MainActivity,java.lang.String) -> B
-    void requestExternalStoragePermission() -> C
-    void updateConsole(java.lang.String) -> D
-com.meizu.mzhotfix.MainActivity$1 -> com.meizu.mzhotfix.MainActivity$a:
-    com.meizu.mzhotfix.MainActivity this$0 -> a
-    void handle(java.lang.String) -> a
-com.meizu.mzhotfix.MainActivity$1$1 -> com.meizu.mzhotfix.MainActivity$a$a:
-    java.lang.String val$msg -> a
-    com.meizu.mzhotfix.MainActivity$1 this$1 -> b
-com.meizu.mzhotfix.MainApplication -> com.meizu.mzhotfix.c:
-com.meizu.mzhotfix.ResTestActivity -> com.meizu.mzhotfix.ResTestActivity:
-    android.widget.TextView tv -> r
-    android.widget.ImageView iv -> s
-    boolean onSupportNavigateUp() -> x
+    void $r8$lambda$795iurvc4oxtnGXWlbdBqsFD6Kc(com.meizu.mzhotfix.MainActivity,java.lang.String) -> B
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$KEJyB0N1XzuCvcfbF7WYxRIvHM0(com.meizu.mzhotfix.MainActivity,java.lang.String) -> C
+      # {"id":"com.android.tools.r8.synthesized"}
+    void lambda$onCreate$0(java.lang.String) -> D
+    void lambda$onCreate$1(java.lang.String) -> E
+    void requestExternalStoragePermission() -> F
+    void updateConsole(java.lang.String) -> G
+com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda0 -> com.meizu.mzhotfix.c:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$6f0ee259a48348b99d8cf05cab92ef2ef00c0b9dfbdad5fef2d16b8862c0992f$0.f$0 -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$6f0ee259a48348b99d8cf05cab92ef2ef00c0b9dfbdad5fef2d16b8862c0992f$0.<init>(com.meizu.mzhotfix.MainActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$6f0ee259a48348b99d8cf05cab92ef2ef00c0b9dfbdad5fef2d16b8862c0992f$0.handle(java.lang.String) -> a
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda1 -> com.meizu.mzhotfix.d:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    java.lang.String com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$2$1cb2263fb9c7bcd2b3b7272b6169335d3f60d749426fbb21ba02cff44e741a50$0.f$1 -> b
+    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$2$1cb2263fb9c7bcd2b3b7272b6169335d3f60d749426fbb21ba02cff44e741a50$0.f$0 -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$2$1cb2263fb9c7bcd2b3b7272b6169335d3f60d749426fbb21ba02cff44e741a50$0.<init>(com.meizu.mzhotfix.MainActivity,java.lang.String) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$2$1cb2263fb9c7bcd2b3b7272b6169335d3f60d749426fbb21ba02cff44e741a50$0.run() -> run
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.MainApplication -> com.meizu.mzhotfix.e:
 com.meizu.mzhotfix.SOFixDemo -> com.meizu.mzhotfix.SOFixDemo:
     void test(android.content.Context) -> a
 com.meizu.mzhotfix.SophixStubApplication -> com.meizu.mzhotfix.SophixStubApplication:
     java.lang.String TAG -> a
     com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener msgDisplayListener -> b
     java.lang.StringBuilder cacheMsg -> c
-    void initSophix() -> a
-com.meizu.mzhotfix.SophixStubApplication$1 -> com.meizu.mzhotfix.SophixStubApplication$a:
-    com.meizu.mzhotfix.SophixStubApplication this$0 -> a
-com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener -> com.meizu.mzhotfix.SophixStubApplication$b:
+    void $r8$lambda$o4oV5B78RebekFKZNScCcq5zjPY(com.meizu.mzhotfix.SophixStubApplication,int,int,java.lang.String,int) -> a
+      # {"id":"com.android.tools.r8.synthesized"}
+    void initSophix() -> b
+    void lambda$initSophix$0(int,int,java.lang.String,int) -> c
+com.meizu.mzhotfix.SophixStubApplication$$ExternalSyntheticLambda0 -> com.meizu.mzhotfix.f:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.SophixStubApplication com.meizu.mzhotfix.SophixStubApplication$$InternalSyntheticLambda$1$650eb2a45f52d7949370950b4bb875932e139b5200c23dd2f369f4a129114301$0.f$0 -> a
+    void com.meizu.mzhotfix.SophixStubApplication$$InternalSyntheticLambda$1$650eb2a45f52d7949370950b4bb875932e139b5200c23dd2f369f4a129114301$0.<init>(com.meizu.mzhotfix.SophixStubApplication) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.SophixStubApplication$$InternalSyntheticLambda$1$650eb2a45f52d7949370950b4bb875932e139b5200c23dd2f369f4a129114301$0.onLoad(int,int,java.lang.String,int) -> onLoad
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener -> com.meizu.mzhotfix.SophixStubApplication$a:
     void handle(java.lang.String) -> a
-com.meizu.mzhotfix.TestFieldAnnotation -> com.meizu.mzhotfix.d:
+com.meizu.mzhotfix.TestFieldAnnotation -> com.meizu.mzhotfix.g:
 com.ta.a.a -> b0.a:
     android.content.Context mContext -> a
     long a -> b

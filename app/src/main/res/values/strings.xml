@@ -6,11 +6,12 @@
     <string name="clear_patch">清空本地补丁</string>
     <string name="dex_test">Dex修复测试</string>
     <string name="pull_patch">拉取最新补丁</string>
-    <string name="res_test">资源修复测试界面</string>
+    <string name="res_test">资源修复</string>
 
     <string name="select_hotfix_mode">选择补丁模式</string>
 
-    <string name="tv_value">修复前tv值.......</string>
+    <string name="tv_repair_before">文本未修复</string>
+    <string name="tv_repair_after">文本已修复</string>
     <string name="so_test">SO文件修复测试</string>
 
     <!--应用程序信息文本-->

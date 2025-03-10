@@ -1,51 +1,42 @@
 package com.meizu.mzhotfix;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.meizu.mzhotfix.R;
-
 public class ResTestActivity extends AppCompatActivity {
-    private TextView tv;
-    private ImageView iv;
+
+    private final static String TAG = "MzHotFix";
+    private final static String SUB_TAG = "MainActivity-> ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restest);
-
-        tv = (TextView) findViewById(R.id.tv);
-        tv.setText(R.string.tv_value);
-        tv.setTextColor(getResources().getColor(R.color.colorBlack));
-
-        iv = (ImageView) findViewById(R.id.iv);
-        iv.setImageResource(R.mipmap.add);
-
+        Log.i(TAG, SUB_TAG + "onCreate");
         ActionBar mActionBar = getSupportActionBar();
-        mActionBar.setHomeButtonEnabled(true);
-        mActionBar.setDisplayHomeAsUpEnabled(true);
-        mActionBar.setTitle(R.string.res_test);
-    }
-
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.iv:
-                break;
-            case R.id.btn:
-                break;
-            default:
-                break;
+        if (mActionBar != null) {
+            mActionBar.setHomeButtonEnabled(true);
+            mActionBar.setDisplayHomeAsUpEnabled(true);
+            mActionBar.setTitle(R.string.res_test);
         }
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
-        finish();
-        return super.onSupportNavigateUp();
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
+
 }

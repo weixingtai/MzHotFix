@@ -9,11 +9,14 @@ import android.util.Log;
  */
 public class MainApplication extends Application {
 
+    private final static String TAG = "MzHotFix";
+    private final static String SUB_TAG = "MainApplication-> ";
+
     @Override
     public void onCreate() {
         super.onCreate();
 
-        Log.i("MainApplication", "原有的Application，可以通过补丁修改");
+        Log.i(TAG, SUB_TAG + "原有的Application，可以通过补丁修改");
     }
 
 }
