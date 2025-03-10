@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:name="com.meizu.mzhotfix.SophixStubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="335447061" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="86c7ba6163df47ae908035f0f1e51620" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCKEdAucEg6Z3WEwJGABe8hEgtfMi1Fd1ta2raoraxJavNvodhJOgB1LOWKXVQZbROgp+Jo1s0vH9cvDhCodKhSrEUBQVqEoJ6e1FgCM0lKDvktuEyZQX+tkXHL6q/yn7Bu3PrMAKnRNTFzguHuidBM9knc41toopKplo2HgT4rcUbLQNeUp2T+odCdBHxqMKQbr0N2RskNrlHoBFgqlzaLvQKWmuBodoj4ZOwr8sEf/FZfssjtsbwB1xuN5IzBK5tekP+bGjOH615Ty6hh27t02wgFFBVnqRuCemuP/PFjmqfHQuzOn4tbg2U941hF8G3Omz7ZfxKpjZLWusVte5pXAgMBAAECggEAVZWVJjQTkaBwCEoV5vXGtQkqY2gHB/hkeHz6nLSLBzd0js4T89AwWHHsF0iiyOAEOqHWhoYfygZCrLhbOxCVBioi3BRWt7+Yk3us0jBYTb/aVazYTmd7bWuqzmw7hHnYM+Bm1e3TVgtTC/cldWeX5x0DzBhioQmlP9pDAKvsjaBPv8t8DClRdCHVc27rg24uRYsDpRZG5j8tEGzQHWNXkgGHByeYqulMAgsAKAQrSnlT4mIPlYT9XrZu+FTrqsksm+sC5t+3qbxaq3NfpTxL5O9N02g69OkCbeVdRXmxo1IhteEFWnAG8hXjFmsAbhj73mrFZWjPnPrvZwLLHd9CgQKBgQDPVbe8UxOFy1rTO9V/byJJQndUW6+QAp3EMOvTZrnSW5IOJDmVE9YKQ1L79NokAPg+ZXfk3MmDv84AehVNgB39gmXrOwfr4EBHJ+YbwwYNNEZeASviVRt2J4BLmBGJdERoo2BM5I3UKXwA4mj/Oc6RefB5/3wFfzw5ox8GcD8+/QKBgQCqehpS3VJZazczSfc8yhgGB4paSE2+wwksHfpeL1MgTD3AqvPl4flhfy8qEiqKRmkILLT65/FGpyQkXHs7oE3l0YiNwlx/dB7P8DgoWBRjVHlSlMHlQIFmS4BbL7vfIaA41qJth4b4A5FKd9KHRQpOHi24JXEferYY9mR6uZ3A4wKBgQC1X8QKsBYs/fcnQHmFMEArHETtfAN6FH/VKAK0/XFjLw325wOkgSTF9505ojnOMzb2xqb6g5aZdYoNar8F/CTAJ3lnLU3Br3wrgyDOem3p0SgZhibQqSkL1IRsHMyClT5e10UgHvRffCbpUycM1pH5O1X+M1xYJrUVqrgyVrFNNQKBgQCHFv0XHxTrkN+MQBewT0EcPgtvoY4iFXGGSTcmPYA0vtXMgGuHhjtU/DEGuKCHNGZ0uOCtVvFGGJq2SabJyC0Saak5FISx5vWnt2b46Vs2nzEItKK1pRklU70iBUBt/7p0b/kErHnSvRj8Ftl4ocgZwSZfnyP2WwpD27Qh4EbXGwKBgQC2U/IgBJ9hInl/dl7rLAS2YGMyoKma4/Wzpc6jdz3Ti1u332YrroUqV8ezv4QAUwrY0Uhg+7hFuO+6q2QjyhYfJzDL0caCCBg2ePjgQlSEVA4R31MmrYWc3ar6P1/hBF/YhM0DzTwNZCPlNhcTzAOWzzfB3cWHMgZdB+yqFx94vA==" />
+
+        <activity
+            android:name="com.meizu.mzhotfix.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.meizu.mzhotfix.ResTestActivity" />
+        <activity android:name="com.meizu.mzhotfix.AboutActivity"
+                  android:label="关于我们"/>
+        <activity android:name="com.meizu.mzhotfix.HelperActivity"
+                  android:label="帮助中心"/>
+    </application>
+
+</manifest>
