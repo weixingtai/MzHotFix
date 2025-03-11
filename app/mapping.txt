@@ -3,8 +3,8 @@
 # min_api: 18
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.0"}
-# pg_map_id: 8caf6b3
-# pg_map_hash: SHA-256 8caf6b3e9a56c700392daf6a1502d16fe798b57023e251101300eaa5e4c5eaf0
+# pg_map_id: 38f2c77
+# pg_map_hash: SHA-256 38f2c7700fa759662a91d425e03d31294f29e1fb1ffd42332d25bc5bede76098
 android.animation.Animator$AnimatorPauseListener -> android.animation.Animator$AnimatorPauseListener:
 # {"id":"com.android.tools.r8.synthesized"}
     void <clinit>() -> <clinit>
@@ -6546,21 +6546,12 @@ com.meizu.mzhotfix.SophixStubApplication -> com.meizu.mzhotfix.SophixStubApplica
     java.lang.String TAG -> a
     com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener msgDisplayListener -> b
     java.lang.StringBuilder cacheMsg -> c
-    void $r8$lambda$o4oV5B78RebekFKZNScCcq5zjPY(com.meizu.mzhotfix.SophixStubApplication,int,int,java.lang.String,int) -> a
-      # {"id":"com.android.tools.r8.synthesized"}
-    void initSophix() -> b
-    void lambda$initSophix$0(int,int,java.lang.String,int) -> c
-com.meizu.mzhotfix.SophixStubApplication$$ExternalSyntheticLambda0 -> com.meizu.mzhotfix.f:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
-    com.meizu.mzhotfix.SophixStubApplication com.meizu.mzhotfix.SophixStubApplication$$InternalSyntheticLambda$1$650eb2a45f52d7949370950b4bb875932e139b5200c23dd2f369f4a129114301$0.f$0 -> a
-    void com.meizu.mzhotfix.SophixStubApplication$$InternalSyntheticLambda$1$650eb2a45f52d7949370950b4bb875932e139b5200c23dd2f369f4a129114301$0.<init>(com.meizu.mzhotfix.SophixStubApplication) -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    void com.meizu.mzhotfix.SophixStubApplication$$InternalSyntheticLambda$1$650eb2a45f52d7949370950b4bb875932e139b5200c23dd2f369f4a129114301$0.onLoad(int,int,java.lang.String,int) -> onLoad
-      # {"id":"com.android.tools.r8.synthesized"}
-com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener -> com.meizu.mzhotfix.SophixStubApplication$a:
+    void initSophix() -> a
+com.meizu.mzhotfix.SophixStubApplication$1 -> com.meizu.mzhotfix.SophixStubApplication$a:
+    com.meizu.mzhotfix.SophixStubApplication this$0 -> a
+com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener -> com.meizu.mzhotfix.SophixStubApplication$b:
     void handle(java.lang.String) -> a
-com.meizu.mzhotfix.TestFieldAnnotation -> com.meizu.mzhotfix.g:
+com.meizu.mzhotfix.TestFieldAnnotation -> com.meizu.mzhotfix.f:
 com.ta.a.a -> b0.a:
     android.content.Context mContext -> a
     long a -> b

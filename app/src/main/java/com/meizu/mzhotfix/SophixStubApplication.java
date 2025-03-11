@@ -45,21 +45,24 @@ public class SophixStubApplication extends SophixApplication {
                 .setAesKey(null)
                 .setEnableDebug(true)
                 .setEnableFullLog()
-                .setPatchLoadStatusStub((mode, code, info, handlePatchVersion) -> {
-                    String msg = new StringBuilder("").append("Mode:").append(mode)
-                            .append(" Code:").append(code)
-                            .append(" Info:").append(info)
-                            .append(" HandlePatchVersion:").append(handlePatchVersion).toString();
-                    if (msgDisplayListener != null) {
-                        msgDisplayListener.handle(msg);
-                    } else {
-                        cacheMsg.append("\n").append(msg);
-                    }
-                    if (code == PatchStatus.CODE_LOAD_SUCCESS) {
-                        Log.i(TAG, "sophix load patch success!");
-                    } else if (code == PatchStatus.CODE_LOAD_RELAUNCH) {
-                        // 如果需要在后台重启，建议此处用SharePreference保存状态。
-                        Log.i(TAG, "sophix preload patch success. restart app to make effect.");
+                .setPatchLoadStatusStub(new PatchLoadStatusListener() {
+                    @Override
+                    public void onLoad(final int mode, final int code, final String info, final int handlePatchVersion) {
+                        String msg = new StringBuilder("").append("Mode:").append(mode)
+                                .append(" Code:").append(code)
+                                .append(" Info:").append(info)
+                                .append(" HandlePatchVersion:").append(handlePatchVersion).toString();
+                        if (msgDisplayListener != null) {
+                            msgDisplayListener.handle(msg);
+                        } else {
+                            cacheMsg.append("\n").append(msg);
+                        }
+                        if (code == PatchStatus.CODE_LOAD_SUCCESS) {
+                            Log.i(TAG, "sophix load patch success!");
+                        } else if (code == PatchStatus.CODE_LOAD_RELAUNCH) {
+                            // 如果需要在后台重启，建议此处用SharePreference保存状态。
+                            Log.i(TAG, "sophix preload patch success. restart app to make effect.");
+                        }
                     }
                 }).initialize();
     }
