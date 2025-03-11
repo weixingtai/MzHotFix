@@ -95,7 +95,7 @@ public class OriginActivity extends AppCompatActivity {
                 updateConsole("old apk from java...");
                 break;
             case R.id.btn_sotest:
-                SOFixDemo.test(this);
+//                SOFileManager.test(this);
                 updateConsole("apk from native...");
                 break;
             case R.id.btn_kill:

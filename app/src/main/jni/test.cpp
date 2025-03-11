@@ -5,10 +5,10 @@
 #include <string.h>
 #include "common.h"
 
-#define JNIREG_CLASS "com/alibaba/sophix/demo/SOFixDemo"
+#define JNIREG_CLASS "com/meizu/mzhotfix/SOFileManager"
 const int g_nDataSize = 3000;
 
-extern "C" JNIEXPORT void JNICALL Java_com_taobao_patch_demo_SOFixDemo_print(JNIEnv *env, jclass clazz) {
+extern "C" JNIEXPORT void JNICALL Java_com_meizu_mzhotfix_SOFileManager_print(JNIEnv *env, jclass clazz) {
     LOGD("old native print %d", g_nDataSize);
 }
 
@@ -44,8 +44,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
         return -1;
     }
     jclass clz = env->FindClass(JNIREG_CLASS);
-    if (env->RegisterNatives(clz, nativeMethods,
-                             sizeof(nativeMethods) / sizeof(nativeMethods[0])) != JNI_OK) {
+    if (env->RegisterNatives(clz, nativeMethods,sizeof(nativeMethods) / sizeof(nativeMethods[0])) != JNI_OK) {
         return JNI_ERR;
     }
     return JNI_VERSION_1_4;

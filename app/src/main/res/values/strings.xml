@@ -18,10 +18,11 @@
     <string name="iv_repair_title">图片替换测试: </string>
     <string name="so_test">SO文件修复测试</string>
 
-    <string name="tv_repair_fun">方法替换测试: </string>
-    <string name="tv_repair_annotation">注解替换测试: </string>
-    <string name="tv_repair_obj_method">对象方法替换测试: </string>
-    <string name="tv_repair_obj_filed">对象变量替换测试: </string>
+    <string name="tv_repair_fun_title">方法替换测试: </string>
+    <string name="tv_repair_annotation_title">注解替换测试: </string>
+    <string name="tv_repair_obj_method_title">对象方法替换测试: </string>
+    <string name="tv_repair_obj_filed_title">对象变量替换测试: </string>
+    <string name="tv_repair_so_title">so方法修改测试: </string>
 
     <!--应用程序信息文本-->
     <string name="app_name">热更新示例</string>

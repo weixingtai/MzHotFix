@@ -3,6 +3,7 @@ package com.meizu.mzhotfix;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -24,6 +25,11 @@ public class SoFileActivity extends AppCompatActivity {
             mActionBar.setDisplayHomeAsUpEnabled(true);
             mActionBar.setTitle(R.string.repair_so);
         }
+
+        TextView tvRepair = findViewById(R.id.tv_repair);
+
+        tvRepair.setText(SOFileManager.getRepairSo());
+
     }
 
     @Override

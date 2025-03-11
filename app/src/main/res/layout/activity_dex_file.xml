@@ -18,7 +18,7 @@
         android:paddingTop="16dp"
         android:paddingEnd="16dp"
         android:paddingBottom="4dp"
-        android:text="@string/tv_repair_fun"
+        android:text="@string/tv_repair_fun_title"
         android:textColor="#000000"
         android:textSize="15sp" />
 
@@ -44,7 +44,7 @@
         android:paddingTop="16dp"
         android:paddingEnd="16dp"
         android:paddingBottom="4dp"
-        android:text="@string/tv_repair_annotation"
+        android:text="@string/tv_repair_annotation_title"
         android:textColor="#000000"
         android:textSize="15sp" />
 
@@ -70,7 +70,7 @@
         android:paddingTop="16dp"
         android:paddingEnd="16dp"
         android:paddingBottom="4dp"
-        android:text="@string/tv_repair_obj_filed"
+        android:text="@string/tv_repair_obj_filed_title"
         android:textColor="#000000"
         android:textSize="15sp" />
 
@@ -96,7 +96,7 @@
         android:paddingTop="16dp"
         android:paddingEnd="16dp"
         android:paddingBottom="4dp"
-        android:text="@string/tv_repair_obj_method"
+        android:text="@string/tv_repair_obj_method_title"
         android:textColor="#000000"
         android:textSize="15sp" />
 
