@@ -2,31 +2,27 @@ package com.meizu.mzhotfix;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ResTestActivity extends AppCompatActivity {
+public class SoFileActivity extends AppCompatActivity {
 
     private final static String TAG = "MzHotFix";
-    private final static String SUB_TAG = "MainActivity-> ";
+    private final static String SUB_TAG = "DexFileActivity-> ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restest);
+        setContentView(R.layout.activity_so_file);
         Log.i(TAG, SUB_TAG + "onCreate");
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
             mActionBar.setHomeButtonEnabled(true);
             mActionBar.setDisplayHomeAsUpEnabled(true);
-            mActionBar.setTitle(R.string.res_test);
+            mActionBar.setTitle(R.string.repair_so);
         }
     }
 

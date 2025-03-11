@@ -5,16 +5,22 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.taobao.sophix.SophixManager;
+
+import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,20 +29,20 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_EXTERNAL_STORAGE_PERMISSION = 0;
 
-    private TextView mStatusTv;
-    private String mStatusStr = "";
+    private RelativeLayout rlOrigin;
+    private RelativeLayout rlSophix;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mStatusTv = findViewById(R.id.tv_status);
-        updateConsole(SophixStubApplication.cacheMsg.toString());
-
+        Log.i(TAG, SUB_TAG + "onCreate");
+        rlOrigin = findViewById(R.id.rl_origin);
+        rlSophix = findViewById(R.id.rl_sophix);
         if (Build.VERSION.SDK_INT >= 23) {
+            Log.i(TAG, SUB_TAG + "sdk version >= 23");
             requestExternalStoragePermission();
         }
-        SophixStubApplication.msgDisplayListener = msg -> runOnUiThread(() -> updateConsole(msg));
     }
 
     /**
@@ -48,65 +54,23 @@ public class MainActivity extends AppCompatActivity {
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                     REQUEST_EXTERNAL_STORAGE_PERMISSION);
+        } else {
+            rlOrigin.setOnClickListener(v -> startActivity(new Intent(this, OriginActivity.class)));
+            rlSophix.setOnClickListener(v -> startActivity(new Intent(this, SophixActivity.class)));
         }
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_EXTERNAL_STORAGE_PERMISSION:
-                if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    updateConsole("local external storage patch is invalid as not read external storage permission");
-                }
-                break;
-            default:
-        }
-    }
-
-    /**
-     * 更新监控台的输出信息
-     *
-     * @param content 更新内容
-     */
-    private void updateConsole(String content) {
-        mStatusStr += content + "\n";
-        if (mStatusTv != null) {
-            mStatusTv.setText(mStatusStr);
-        }
-    }
-
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_restest:
-                startActivity(new Intent(this, ResTestActivity.class));
-                break;
-            case R.id.btn_download:
-                SophixManager.getInstance().queryAndLoadNewPatch();
-                break;
-            case R.id.btn_test:
-                DexFixDemo.test_normal(MainActivity.this);
-                DexFixDemo.test_annotation();
-                DexFixDemo.test_addField();
-                DexFixDemo.test_addMethod();
-                updateConsole("old apk from java...");
-                break;
-            case R.id.btn_sotest:
-                SOFixDemo.test(MainActivity.this);
-                updateConsole("apk from native...");
-                break;
-            case R.id.btn_kill:
-                android.os.Process.killProcess(android.os.Process.myPid());
-                break;
-            case R.id.btn_clean_patch:
-                SophixManager.getInstance().cleanPatches();
-                updateConsole("clean patches");
-                break;
-            case R.id.btn_clean_console:
-                mStatusStr = "";
-                updateConsole("");
-                break;
-            default:
-                break;
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_EXTERNAL_STORAGE_PERMISSION) {
+            if (grantResults.length != 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                rlOrigin.setOnClickListener(v -> startActivity(new Intent(this, OriginActivity.class)));
+                rlSophix.setOnClickListener(v -> startActivity(new Intent(this, SophixActivity.class)));
+            } else {
+                Log.i(TAG, SUB_TAG + "request permission");
+                rlOrigin.setOnClickListener(v -> Toast.makeText(this, "请先授予读取存储权限！",Toast.LENGTH_SHORT).show());
+                rlSophix.setOnClickListener(v -> Toast.makeText(this, "请先授予读取存储权限！",Toast.LENGTH_SHORT).show());
+            }
         }
     }
 

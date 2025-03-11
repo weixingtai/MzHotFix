@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="colorBlack">#000000</color>
-    <!--<color name="colorYellow">#fdf103</color>-->
+    <color name="fd_sys_color_surface_container_lowest_default">#FFFFFF</color>
+    <color name="colorBlack">#FFFFFF</color>
+    <color name="m3_ref_palette_neutral90">#ffe6e1e5</color>
 </resources>

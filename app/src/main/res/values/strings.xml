@@ -6,22 +6,26 @@
     <string name="clear_patch">清空本地补丁</string>
     <string name="dex_test">Dex修复测试</string>
     <string name="pull_patch">拉取最新补丁</string>
-    <string name="res_test">资源修复</string>
+    <string name="repair_resource">资源文件修复</string>
+    <string name="repair_dex">dex文件修复</string>
+    <string name="repair_so">so文件修复</string>
 
     <string name="select_hotfix_mode">选择补丁模式</string>
 
-    <string name="tv_repair_before">文本未修复</string>
-    <string name="tv_repair_after">文本已修复</string>
+    <string name="tv_repair_title">文本替换测试: </string>
+    <string name="tv_repair_before">这是一段修复前的文本</string>
+    <string name="tv_repair_after">这是一段修复后的文本</string>
+    <string name="iv_repair_title">图片替换测试: </string>
     <string name="so_test">SO文件修复测试</string>
+
+    <string name="tv_repair_fun">方法替换测试: </string>
+    <string name="tv_repair_annotation">注解替换测试: </string>
+    <string name="tv_repair_obj_method">对象方法替换测试: </string>
+    <string name="tv_repair_obj_filed">对象变量替换测试: </string>
 
     <!--应用程序信息文本-->
     <string name="app_name">热更新示例</string>
-    <string name="app_version">v3.1.0</string>
-    <!--关于我们页面-->
-    <string name="layout_aboutus_arr">All Rights Reserved.</string>
-    <string name="layout_aboutus_company">阿里云(软件)有限公司版权所有</string>
-    <string name="layout_aboutus_copyright">Copyright © 2009 - 2016 Aliyun.com</string>
-    <!--帮助中心页面-->
-    <string name="layout_helpus_content">Q : 什么是用户体验Demo？\nA : 用户体验Demo就是阿里云平台为您自动创建的、用来体验移动热修复的一个小Demo。\n\nQ : 如何联系我们？\nA : App Demo相关问题，请搜索钉钉群号：11711603</string>
+    <string name="label_origin">原生热更新</string>
+    <string name="label_sophix">Sophix热更新</string>
 
 </resources>
