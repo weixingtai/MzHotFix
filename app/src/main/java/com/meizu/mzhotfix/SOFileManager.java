@@ -7,16 +7,12 @@ package com.meizu.mzhotfix;
 public class SOFileManager {
 
     static {
-        System.loadLibrary("jnitest");
+        System.loadLibrary("mzhotfix");
     }
 
-    public static native void print();
-
-    public static native String test1(String value);
-
-    public static native void test2();
+    public static native String stringFromJNI();
 
     public static String getRepairSo() {
-        return test1("apk from native");
+        return stringFromJNI();
     }
 }
