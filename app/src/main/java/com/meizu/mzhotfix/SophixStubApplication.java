@@ -226,9 +226,9 @@ public class SophixStubApplication extends SophixApplication {
         super.onCreate();
 //        SophixManager.getInstance().queryAndLoadNewPatch();
         File file = new File(getFilesDir(), "patch/patch.dex");
-        if (file.exists()) {
-            HotFixUtil.INSTANCE.inject(getClassLoader(), file);
-        }
+//        if (file.exists()) {
+//            HotFixUtil.INSTANCE.inject(getClassLoader(), file);
+//        }
     }
 
     public interface MsgDisplayListener {

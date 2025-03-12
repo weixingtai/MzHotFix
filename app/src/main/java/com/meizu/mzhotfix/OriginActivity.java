@@ -47,7 +47,7 @@ public class OriginActivity extends AppCompatActivity {
                 Toast.makeText(this, "已完成热更新！", Toast.LENGTH_SHORT).show();
             } else {
                 FileUtil.INSTANCE.copyAssetFileToPrivateDir(this,"patch.dex");
-                HotFixUtil.INSTANCE.inject(getClassLoader(), file);
+//                HotFixUtil.INSTANCE.inject(getClassLoader(), file);
                 Toast.makeText(this, "热更新成功, 请重启应用！", Toast.LENGTH_SHORT).show();
             }
         });
