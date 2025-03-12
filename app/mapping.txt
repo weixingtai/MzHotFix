@@ -3,8 +3,8 @@
 # min_api: 18
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.0"}
-# pg_map_id: 38f2c77
-# pg_map_hash: SHA-256 38f2c7700fa759662a91d425e03d31294f29e1fb1ffd42332d25bc5bede76098
+# pg_map_id: c549161
+# pg_map_hash: SHA-256 c5491619019d425c109357b63a1e64d8866b9929c39a8e420f5ae71653437b8b
 android.animation.Animator$AnimatorPauseListener -> android.animation.Animator$AnimatorPauseListener:
 # {"id":"com.android.tools.r8.synthesized"}
     void <clinit>() -> <clinit>
@@ -6503,55 +6503,196 @@ androidx.versionedparcelable.VersionedParcelParcel -> androidx.versionedparcelab
     void writeParcelable(android.os.Parcelable) -> w
     void writeString(java.lang.String) -> y
 androidx.versionedparcelable.VersionedParcelable -> a0.a:
-com.meizu.mzhotfix.A -> com.meizu.mzhotfix.a:
-    void a_t2() -> a
-com.meizu.mzhotfix.DexFixDemo -> com.meizu.mzhotfix.b:
-    int temp -> a
-    void test_addField() -> a
-    void test_addMethod() -> b
-    void test_annotation() -> c
-    void test_normal(android.content.Context) -> d
+com.meizu.mzhotfix.DexFileManager -> com.meizu.mzhotfix.a:
+    int repairFiled -> a
+    java.lang.String getRepairAnnotation() -> a
+    java.lang.String getRepairMethod() -> b
+    java.lang.String getRepairObjField() -> c
+    java.lang.String getRepairObjMethod() -> d
+com.meizu.mzhotfix.DexFileOb -> com.meizu.mzhotfix.b:
+    int c -> b
+    java.lang.String getOldText() -> a
+com.meizu.mzhotfix.FileUtil -> com.meizu.mzhotfix.c:
+    com.meizu.mzhotfix.FileUtil INSTANCE -> a
+    void copyAssetFileToPrivateDir(android.content.Context,java.lang.String) -> a
+com.meizu.mzhotfix.HotFixUtil -> com.meizu.mzhotfix.d:
+    com.meizu.mzhotfix.HotFixUtil INSTANCE -> a
+    java.lang.Object combineArray(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object getDexElements(java.lang.Object) -> b
+    java.lang.Object getPathList(java.lang.ClassLoader) -> c
+    void inject(java.lang.ClassLoader,java.io.File) -> d
+    void setDexElements(java.lang.Object,java.lang.Object) -> e
 com.meizu.mzhotfix.MainActivity -> com.meizu.mzhotfix.MainActivity:
-    android.widget.TextView mStatusTv -> r
-    java.lang.String mStatusStr -> s
-    void $r8$lambda$795iurvc4oxtnGXWlbdBqsFD6Kc(com.meizu.mzhotfix.MainActivity,java.lang.String) -> B
+    android.widget.RelativeLayout rlSophix -> s
+    android.widget.RelativeLayout rlOrigin -> r
+    void $r8$lambda$0OVRfcX_NLFRojgiRs3voxMwgAA(com.meizu.mzhotfix.MainActivity,android.view.View) -> B
       # {"id":"com.android.tools.r8.synthesized"}
-    void $r8$lambda$KEJyB0N1XzuCvcfbF7WYxRIvHM0(com.meizu.mzhotfix.MainActivity,java.lang.String) -> C
+    void $r8$lambda$CbkbwpzrIuBO0Tw3Q7vwIQI0H2M(com.meizu.mzhotfix.MainActivity,android.view.View) -> C
       # {"id":"com.android.tools.r8.synthesized"}
-    void lambda$onCreate$0(java.lang.String) -> D
-    void lambda$onCreate$1(java.lang.String) -> E
-    void requestExternalStoragePermission() -> F
-    void updateConsole(java.lang.String) -> G
-com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda0 -> com.meizu.mzhotfix.c:
+    void $r8$lambda$ZSO3-wvfWBQ90TM_Nst-oLFXtm0(com.meizu.mzhotfix.MainActivity,android.view.View) -> D
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$_fkNFCV73w7-EL3RlpIl3a-wRKA(com.meizu.mzhotfix.MainActivity,android.view.View) -> E
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$h7wjDmkfy2T408RgQI6URLVeXWs(com.meizu.mzhotfix.MainActivity,android.view.View) -> F
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$z6HCvS3wG5ziJC0_zAZ8p8GdkgI(com.meizu.mzhotfix.MainActivity,android.view.View) -> G
+      # {"id":"com.android.tools.r8.synthesized"}
+    void lambda$onRequestPermissionsResult$2(android.view.View) -> H
+    void lambda$onRequestPermissionsResult$3(android.view.View) -> I
+    void lambda$onRequestPermissionsResult$4(android.view.View) -> J
+    void lambda$onRequestPermissionsResult$5(android.view.View) -> K
+    void lambda$requestExternalStoragePermission$0(android.view.View) -> L
+    void lambda$requestExternalStoragePermission$1(android.view.View) -> M
+    void requestExternalStoragePermission() -> N
+com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda0 -> com.meizu.mzhotfix.e:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$6f0ee259a48348b99d8cf05cab92ef2ef00c0b9dfbdad5fef2d16b8862c0992f$0.f$0 -> a
-    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$6f0ee259a48348b99d8cf05cab92ef2ef00c0b9dfbdad5fef2d16b8862c0992f$0.<init>(com.meizu.mzhotfix.MainActivity) -> <init>
+    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$0.f$0 -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$0.<init>(com.meizu.mzhotfix.MainActivity) -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$6f0ee259a48348b99d8cf05cab92ef2ef00c0b9dfbdad5fef2d16b8862c0992f$0.handle(java.lang.String) -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$0.onClick(android.view.View) -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
-com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda1 -> com.meizu.mzhotfix.d:
+com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda1 -> com.meizu.mzhotfix.f:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    java.lang.String com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$2$1cb2263fb9c7bcd2b3b7272b6169335d3f60d749426fbb21ba02cff44e741a50$0.f$1 -> b
-    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$2$1cb2263fb9c7bcd2b3b7272b6169335d3f60d749426fbb21ba02cff44e741a50$0.f$0 -> a
-    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$2$1cb2263fb9c7bcd2b3b7272b6169335d3f60d749426fbb21ba02cff44e741a50$0.<init>(com.meizu.mzhotfix.MainActivity,java.lang.String) -> <init>
+    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$1.f$0 -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$1.<init>(com.meizu.mzhotfix.MainActivity) -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$2$1cb2263fb9c7bcd2b3b7272b6169335d3f60d749426fbb21ba02cff44e741a50$0.run() -> run
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$1.onClick(android.view.View) -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
-com.meizu.mzhotfix.MainApplication -> com.meizu.mzhotfix.e:
-com.meizu.mzhotfix.SOFixDemo -> com.meizu.mzhotfix.SOFixDemo:
-    void test(android.content.Context) -> a
+com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda2 -> com.meizu.mzhotfix.g:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$2.f$0 -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$2.<init>(com.meizu.mzhotfix.MainActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$2.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda3 -> com.meizu.mzhotfix.h:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$3.f$0 -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$3.<init>(com.meizu.mzhotfix.MainActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$153d3d81104e274b9346b7d050d08811e71e1120eba0ddca71fd82903e8967be$3.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda4 -> com.meizu.mzhotfix.i:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$3ea62177992eb90e105f202c4fd334923d853af46f026656adfad1e36392f984$0.f$0 -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$3ea62177992eb90e105f202c4fd334923d853af46f026656adfad1e36392f984$0.<init>(com.meizu.mzhotfix.MainActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$3ea62177992eb90e105f202c4fd334923d853af46f026656adfad1e36392f984$0.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.MainActivity$$ExternalSyntheticLambda5 -> com.meizu.mzhotfix.j:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.MainActivity com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$3ea62177992eb90e105f202c4fd334923d853af46f026656adfad1e36392f984$1.f$0 -> a
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$3ea62177992eb90e105f202c4fd334923d853af46f026656adfad1e36392f984$1.<init>(com.meizu.mzhotfix.MainActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.MainActivity$$InternalSyntheticLambda$1$3ea62177992eb90e105f202c4fd334923d853af46f026656adfad1e36392f984$1.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.MainApplication -> com.meizu.mzhotfix.k:
+com.meizu.mzhotfix.OriginActivity -> com.meizu.mzhotfix.OriginActivity:
+    void $r8$lambda$i0iG44VreMykzSy7l6XjqefvLew(com.meizu.mzhotfix.OriginActivity,android.view.View) -> B
+      # {"id":"com.android.tools.r8.synthesized"}
+    void lambda$onCreate$0(android.view.View) -> C
+com.meizu.mzhotfix.OriginActivity$$ExternalSyntheticLambda0 -> com.meizu.mzhotfix.l:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.OriginActivity com.meizu.mzhotfix.OriginActivity$$InternalSyntheticLambda$1$5fb4ecbe29980f961be15d9c7642df02aa459814d167852bfaa66fc1dbfc16d3$0.f$0 -> a
+    void com.meizu.mzhotfix.OriginActivity$$InternalSyntheticLambda$1$5fb4ecbe29980f961be15d9c7642df02aa459814d167852bfaa66fc1dbfc16d3$0.<init>(com.meizu.mzhotfix.OriginActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.OriginActivity$$InternalSyntheticLambda$1$5fb4ecbe29980f961be15d9c7642df02aa459814d167852bfaa66fc1dbfc16d3$0.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.SOFileManager -> com.meizu.mzhotfix.SOFileManager:
+    java.lang.String getRepairSo() -> a
+com.meizu.mzhotfix.SophixActivity -> com.meizu.mzhotfix.SophixActivity:
+    android.widget.TextView tvStatus -> r
+    java.lang.String strStatus -> s
+    void $r8$lambda$7aGeLhMW9ZOdQh7K0iEbcYjBvfM(com.meizu.mzhotfix.SophixActivity,android.view.View) -> B
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$LHWoHqd2YMQ4Qr0sVRS1Lp6eIAk(com.meizu.mzhotfix.SophixActivity,android.view.View) -> C
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$cNkH2okA504UDeEGAr0fPnWo4KY(com.meizu.mzhotfix.SophixActivity,java.lang.String) -> D
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$kQjVnZ1jvzy0M97igzZxHoyub0Q(com.meizu.mzhotfix.SophixActivity,java.lang.String) -> E
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$t46SaEuCm_dCpUIiVWx4pOFpgM8(com.meizu.mzhotfix.SophixActivity,android.view.View) -> F
+      # {"id":"com.android.tools.r8.synthesized"}
+    void $r8$lambda$w1L5Ur41jSw7Q_g4mrGsAeNPcto(com.meizu.mzhotfix.SophixActivity,android.view.View) -> G
+      # {"id":"com.android.tools.r8.synthesized"}
+    void lambda$onCreate$0(android.view.View) -> H
+    void lambda$onCreate$1(android.view.View) -> I
+    void lambda$onCreate$2(android.view.View) -> J
+    void lambda$onCreate$3(android.view.View) -> K
+    void lambda$onCreate$4(java.lang.String) -> L
+    void lambda$onCreate$5(java.lang.String) -> M
+    void updateConsole(java.lang.String) -> N
+com.meizu.mzhotfix.SophixActivity$$ExternalSyntheticLambda0 -> com.meizu.mzhotfix.m:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.SophixActivity com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$0.f$0 -> a
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$0.<init>(com.meizu.mzhotfix.SophixActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$0.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.SophixActivity$$ExternalSyntheticLambda1 -> com.meizu.mzhotfix.n:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.SophixActivity com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$1.f$0 -> a
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$1.<init>(com.meizu.mzhotfix.SophixActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$1.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.SophixActivity$$ExternalSyntheticLambda2 -> com.meizu.mzhotfix.o:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.SophixActivity com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$2.f$0 -> a
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$2.<init>(com.meizu.mzhotfix.SophixActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$2.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.SophixActivity$$ExternalSyntheticLambda3 -> com.meizu.mzhotfix.p:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.SophixActivity com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$3.f$0 -> a
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$3.<init>(com.meizu.mzhotfix.SophixActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$3.onClick(android.view.View) -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.SophixActivity$$ExternalSyntheticLambda4 -> com.meizu.mzhotfix.q:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.SophixActivity com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$4.f$0 -> a
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$4.<init>(com.meizu.mzhotfix.SophixActivity) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$1$e1fcda9c7fda0cdd4a1448ba4ceec637af292cc3720d74984f453bcf019e729f$4.handle(java.lang.String) -> a
+      # {"id":"com.android.tools.r8.synthesized"}
+com.meizu.mzhotfix.SophixActivity$$ExternalSyntheticLambda5 -> com.meizu.mzhotfix.r:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    com.meizu.mzhotfix.SophixActivity com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$2$513d5dbd101872543aafb47f4a26243021a38ffdd0241b2e33f34c8eadfd2f5a$0.f$0 -> a
+    java.lang.String com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$2$513d5dbd101872543aafb47f4a26243021a38ffdd0241b2e33f34c8eadfd2f5a$0.f$1 -> b
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$2$513d5dbd101872543aafb47f4a26243021a38ffdd0241b2e33f34c8eadfd2f5a$0.<init>(com.meizu.mzhotfix.SophixActivity,java.lang.String) -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    void com.meizu.mzhotfix.SophixActivity$$InternalSyntheticLambda$2$513d5dbd101872543aafb47f4a26243021a38ffdd0241b2e33f34c8eadfd2f5a$0.run() -> run
+      # {"id":"com.android.tools.r8.synthesized"}
 com.meizu.mzhotfix.SophixStubApplication -> com.meizu.mzhotfix.SophixStubApplication:
     java.lang.String TAG -> a
-    com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener msgDisplayListener -> b
-    java.lang.StringBuilder cacheMsg -> c
+    java.lang.String SUB_TAG -> b
+    com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener msgDisplayListener -> c
+    java.lang.StringBuilder cacheMsg -> d
     void initSophix() -> a
 com.meizu.mzhotfix.SophixStubApplication$1 -> com.meizu.mzhotfix.SophixStubApplication$a:
     com.meizu.mzhotfix.SophixStubApplication this$0 -> a
 com.meizu.mzhotfix.SophixStubApplication$MsgDisplayListener -> com.meizu.mzhotfix.SophixStubApplication$b:
     void handle(java.lang.String) -> a
-com.meizu.mzhotfix.TestFieldAnnotation -> com.meizu.mzhotfix.f:
+com.meizu.mzhotfix.StrUtil -> com.meizu.mzhotfix.s:
+    com.meizu.mzhotfix.StrUtil INSTANCE -> a
+    java.lang.String getRepairMethod() -> a
+com.meizu.mzhotfix.TestFieldAnnotation -> com.meizu.mzhotfix.t:
+com.meizu.mzhotfix.TestMethodAnnotation -> com.meizu.mzhotfix.u:
 com.ta.a.a -> b0.a:
     android.content.Context mContext -> a
     long a -> b
@@ -6677,3 +6818,12 @@ javax.net.ssl.X509ExtendedTrustManager -> javax.net.ssl.X509ExtendedTrustManager
       # {"id":"com.android.tools.r8.synthesized"}
     void <init>() -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
+kotlin.jvm.internal.Intrinsics -> h0.a:
+    void checkNotNull(java.lang.Object) -> a
+    void checkNotNullExpressionValue(java.lang.Object,java.lang.String) -> b
+    void checkNotNullParameter(java.lang.Object,java.lang.String) -> c
+    java.lang.String createParameterIsNullExceptionMessage(java.lang.String) -> d
+    java.lang.Throwable sanitizeStackTrace(java.lang.Throwable) -> e
+    java.lang.Throwable sanitizeStackTrace(java.lang.Throwable,java.lang.String) -> f
+    void throwJavaNpe() -> g
+    void throwParameterIsNullNPE(java.lang.String) -> h

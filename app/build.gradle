@@ -35,7 +35,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.pro'
             signingConfig signingConfigs.release
         }
@@ -87,7 +87,7 @@ tasks.register("buildPatch", Exec.class) {
     println("d8Path：${ d8Path }")
 
     // 设置输入输出路径
-    String classesDir = layout.getBuildDirectory().dir("tmp/kotlin-classes/debug").get()
+    String classesDir = layout.getBuildDirectory().dir("tmp/kotlin-classes/release").get()
     String outputDir = layout.getBuildDirectory().dir("outputs").get()
 
     println("classesDir：${ classesDir }")

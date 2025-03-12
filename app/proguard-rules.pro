@@ -19,3 +19,17 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# 保持反射访问的字段
+-keepclassmembers class dalvik.system.BaseDexClassLoader {
+    *** pathList;
+}
+
+-keepclassmembers class dalvik.system.DexPathList {
+    ***[] dexElements;
+}
+
+-keepclassmembers class com.meizu.mzhotfix.MainApplication {
+    public <init>();
+}
+-keep class com.meizu.mzhotfix.SophixStubApplication$RealApplicationStub
