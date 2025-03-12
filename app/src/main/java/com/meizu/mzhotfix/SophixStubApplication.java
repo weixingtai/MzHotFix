@@ -11,6 +11,8 @@ import com.taobao.sophix.SophixEntry;
 import com.taobao.sophix.SophixManager;
 import com.taobao.sophix.listener.PatchLoadStatusListener;
 
+import java.io.File;
+
 public class SophixStubApplication extends SophixApplication {
 
     private final String TAG = "MzHotFix";
@@ -223,6 +225,10 @@ public class SophixStubApplication extends SophixApplication {
     public void onCreate() {
         super.onCreate();
 //        SophixManager.getInstance().queryAndLoadNewPatch();
+        File file = new File(getFilesDir(), "patch/patch.dex");
+        if (file.exists()) {
+            HotFixUtil.INSTANCE.inject(getClassLoader(), file);
+        }
     }
 
     public interface MsgDisplayListener {

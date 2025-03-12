@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
     compileSdk 32
@@ -56,15 +57,53 @@ android {
             version '3.22.1'
         }
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildToolsVersion '30.0.3'
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
-
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.0'
     implementation 'com.aliyun.ams:alicloud-android-hotfix:3.4.1'
 
     //多dex测试依赖
 //    implementation 'com.android.support:multidex:1.0.1'
+
+}
+
+tasks.register("buildPatch", Exec.class) {
+    dependsOn("compileDebugKotlin")
+
+    // 正确获取Android SDK路径
+    String androidSdkDir = android.sdkDirectory
+    String buildToolsVersion = "30.0.3" // 修改为你实际使用的版本
+
+    // 构建d8工具路径
+    String d8Path = (new File(androidSdkDir, "build-tools/$buildToolsVersion/d8")).absolutePath
+
+    println("d8Path：${ d8Path }")
+
+    // 设置输入输出路径
+    String classesDir = layout.getBuildDirectory().dir("tmp/kotlin-classes/debug").get()
+    String outputDir = layout.getBuildDirectory().dir("outputs").get()
+
+    println("classesDir：${ classesDir }")
+    println("outputDir：${ outputDir }")
+
+    commandLine(
+            d8Path,
+            "--classpath", (new File(androidSdkDir, "platforms/android-30/android.jar")).absolutePath,
+            "--output", (new File(outputDir, "patchs")).absolutePath,
+            (new File(classesDir, "/com/meizu/mzhotfix/StrUtil.class")).absolutePath
+    )
+
+    doLast {
+        new File(new File(outputDir, "/patchs/").absolutePath, "classes.dex").renameTo(new File(new File(outputDir, "/patchs/").absolutePath, "patch.dex"))
+        new File((new File(outputDir, "/patchs/")).absolutePath, "patch.dex").setReadOnly()
+        println("补丁文件生成于：${(new File(outputDir)).absolutePath}/patch.dex")
+    }
 
 }

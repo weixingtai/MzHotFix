@@ -18,6 +18,7 @@
     <string name="iv_repair_title">图片替换测试: </string>
     <string name="so_test">SO文件修复测试</string>
 
+    <string name="tv_repair_origin_title">原生方法dex替换测试: </string>
     <string name="tv_repair_fun_title">方法替换测试: </string>
     <string name="tv_repair_annotation_title">注解替换测试: </string>
     <string name="tv_repair_obj_method_title">对象方法替换测试: </string>
